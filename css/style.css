@@ -207,6 +207,7 @@ p{
 }
 
 
+
 /*手機版的 */  
 
 @media screen and (max-width: 768px) {
@@ -261,7 +262,8 @@ h2{
 }
 
 .big{
-	width: 100%;
+	width: 80%;
+	margin-right: 20px;
 }
 
  
@@ -277,3 +279,35 @@ h2{
 	width: 100%;
 }
 
+.white-noise{
+	margin-top: 40px;
+}
+
+.audiobox{
+	margin: 0 auto;
+}
+
+.playlist-mobile{
+	margin: 0 auto;
+}
+
+.playlist-mobile iframe{
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 280px;
+	height: 260px;
+	border-width: 0;
+}
+
+.credit{
+	margin: 0 auto;
+}
+
+}
+
+@media screen and (min-width: 1024px) {
+  .playlist-mobile {
+    display: none;
+  }
+}
