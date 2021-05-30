@@ -238,7 +238,6 @@ section{
 	display: flex;
 	justify-content: space-between;
 	width: 90%;
-	overflow-y: hidden;
 	overflow-x:hidden;
 }
 
