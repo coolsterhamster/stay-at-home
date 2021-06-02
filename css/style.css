@@ -138,6 +138,7 @@ margin-left: 30px;
 	display: flex;
 	text-transform: uppercase;
 	font-weight: 600;
+	float: right;
 }
 
 .share{
@@ -207,9 +208,78 @@ p{
 }
 
 
-/*泡泡效果 */  
+/*選單*/
+@media screen and (min-width: 1024px) {
+  .menu-button {
+    display: none;
+  }
+}
 
 
+
+.first-header{
+	list-style: none;
+	display: flex;
+	text-transform: uppercase;
+	font-weight: 600;
+	float: right;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	font-size: 20px;
+}
+
+.first-header a{
+	display: block;
+	height: 30px;
+	width: 100px;
+	text-align: left;
+}
+
+ul li ul{
+	position:absolute;
+	width: 100px;
+	overflow: visible;
+	clear: left;
+	list-style: none;
+	float:none;
+	text-align: center;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	display: block;
+}
+
+.layer a{
+	float: left;
+	color: black;
+	font-weight: 300;
+	text-transform: lowercase;
+}
+
+ul li ul li{
+	float:none;
+	text-align: center;
+}
+
+.layer li{
+	clear: left;
+}
+
+.layer a{
+	float:none;
+	width: 100%;
+}
+
+ul li ul {
+	/* 預先隱藏第二層 */
+	visibility:hidden;
+}
+
+ul li:hover ul {
+	/* 觸動第一層時，顯示第二層 */
+	visibility:visible;
+}
 
 /*手機版的 */  
 
@@ -313,12 +383,60 @@ h2{
 
 .credit{
 	margin: 0 auto;
-}
+}}
+
+@media screen and (max-width: 1023px) {
+
+ .header {
+    width: auto;
+  }
+
+  .menu-button {
+    float: right;
+    font-size: 25px;
+    line-height: 40px;
+    color: white;
+    background: transparent;
+    padding: 0 15px;
+    border: 0;
+  }
+
+  .menu-button-checkbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 40px;
+    opacity: 0;
+  }
+
+  .menu-button-checkbox:checked ~ .menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    margin-top: 0;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 150px;
+    height: 100%;
+    background: red;
+  }
+
+  .menu li {
+    border: 0;
+    border-radius: 0;
+  }
+
 
 }
 
 @media screen and (min-width: 1024px) {
-  .playlist-mobile {
+  .playlist-mobile, .menu-button, .menu-button-checkbox {
     display: none;
   }
+
 }
