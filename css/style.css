@@ -99,6 +99,13 @@ h4{
 	border-width: 0;
 }
 
+.youtube{
+	width: 280px;
+	height: 200px;
+	border-width: 0;
+	margin-bottom: 20px;
+}
+
 /**middle colum**/
 .image{
 	position: relative;
