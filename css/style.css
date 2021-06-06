@@ -339,9 +339,50 @@ ul li:hover ul {
 /*手機版的 */  
 
 @media screen and (max-width: 1023px) {
-  .container {
+#menu {
     width: auto;
   }
+
+.menu-button {
+    float: right;
+    font-size: 25px;
+    line-height: 40px;
+    color: white;
+    background: transparent;
+    padding: 0 15px;
+    border: 0;
+  }
+
+.menu-button-checkbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 40px;
+    opacity: 0;
+  }
+
+.menu-button-checkbox:checked ~ .menu {
+    display: block;
+  }
+
+.header {
+    display: none;
+    margin-top: 0;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 150px;
+    height: 100%;
+    background: red;
+  }
+
+#header li {
+    border: 0;
+    border-radius: 0;
+  }
+
 
 body {
   padding: 0px;
@@ -373,7 +414,7 @@ section{
 h1{
 	line-height: 88%;
 	font-size: 3rem;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 h2{
@@ -424,7 +465,7 @@ h2{
 }
 
 .playlist-mobile{
-	margin: 0 auto;
+	margin-left: 25px;
 }
 
 .playlist-mobile iframe{
@@ -439,49 +480,6 @@ h2{
 .credit{
 	margin: 0 auto;
 }
-
-#menu {
-    width: auto;
-  }
-
-  .menu-button {
-    float: right;
-    font-size: 25px;
-    line-height: 40px;
-    color: white;
-    background: transparent;
-    padding: 0 15px;
-    border: 0;
-  }
-
-  .menu-button-checkbox {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 55px;
-    height: 40px;
-  }
-
-  .menu-button-checkbox:checked ~ .menu {
-    display: block;
-  }
-
-  .menu {
-    display: none;
-    margin-top: 0;
-    padding-left: 0;
-    position: fixed;
-    right: 0;
-    top: 40px;
-    width: 150px;
-    height: 100%;
-    background: red;
-  }
-
-  .menu li {
-    border: 0;
-    border-radius: 0;
-  }
 
 }
 
