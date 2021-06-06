@@ -519,7 +519,7 @@ h2{
 
 
 @media screen and (min-width: 1024px) {
-  .playlist-mobile, #header-container {
+  .playlist-mobile,{
     display: none;
   }
 
