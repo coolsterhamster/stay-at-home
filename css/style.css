@@ -112,7 +112,7 @@ h4{
 }
 
 .big{
-width: 80%;
+width: 75%;
 margin-left: 30px;
 }
 
@@ -141,12 +141,6 @@ margin-left: 30px;
 	min-width: 265px;
 }
 
-.header{
-	display: flex;
-	text-transform: uppercase;
-	font-weight: 600;
-	float: right;
-}
 
 .share{
 	margin-right: 40px;
@@ -216,15 +210,76 @@ p{
 
 
 /*選單*/
-@media screen and (min-width: 1024px) {
-  .menu-button {
-    display: none;
-  }
+#menu{
+	width: 600px;
+	height: fit-content;
+}
+
+#menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	float: right;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+#menu ul li{
+	float: left;
+}
+
+#menu ul li a{
+	display: block;
+	float: left;
+	height: 30px;
+	text-align: center;
+}
+
+#menu ul li ul {
+	position: absolute;
+	width: fit-content;
+	overflow: visible;
+	clear: left;
+	margin: 30px 0 0 0;
+	visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background-color: #eae2d8;
+	text-transform: lowercase;
+	font-weight: 200;
+}
+
+#menu ul li:hover ul {
+	visibility: visible;}
+
+#menu ul li ul li {
+	float: left;
+	text-align: center;}
+
+#menu ul li ul li a {
+	float: left;
+	width: 100%;
+	color: black;
+
+}
+
+#menu ul li ul li ul {
+	margin-top: -30px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 100px;
+	width: 100%;
 }
 
 
 
-.first-header{
+
+
+
+/*.first-header{
 	list-style: none;
 	display: flex;
 	text-transform: uppercase;
@@ -238,27 +293,20 @@ p{
 
 .first-header a{
 	display: block;
-	height: 30px;
-	width: 100px;
 	text-align: left;
+	float: left;
 }
 
-ul li ul{
+.first-header ul{
+	list-style: none;
 	position:absolute;
-	width: 100px;
+	width: fit-content;
 	overflow: visible;
 	clear: left;
-	list-style: none;
-	float:none;
-	text-align: center;
-	margin-right: 0;
-	margin-bottom: 0;
-	margin-left: 0;
-	display: block;
+	margin: 30px 0 0 0;
 }
 
 .layer a{
-	float: left;
 	color: black;
 	font-weight: 300;
 	text-transform: lowercase;
@@ -279,18 +327,18 @@ ul li ul li{
 }
 
 ul li ul {
-	/* 預先隱藏第二層 */
+	/預先隱藏第二層 
 	visibility:hidden;
 }
 
 ul li:hover ul {
-	/* 觸動第一層時，顯示第二層 */
+	 觸動第一層時，顯示第二層 
 	visibility:visible;
-}
+}*/
 
 /*手機版的 */  
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   .container {
     width: auto;
   }
@@ -390,11 +438,9 @@ h2{
 
 .credit{
 	margin: 0 auto;
-}}
+}
 
-@media screen and (max-width: 1023px) {
-
- .header {
+#menu {
     width: auto;
   }
 
@@ -414,7 +460,6 @@ h2{
     right: 0;
     width: 55px;
     height: 40px;
-    opacity: 0;
   }
 
   .menu-button-checkbox:checked ~ .menu {
@@ -438,8 +483,9 @@ h2{
     border-radius: 0;
   }
 
-
 }
+
+
 
 @media screen and (min-width: 1024px) {
   .playlist-mobile, .menu-button, .menu-button-checkbox {
