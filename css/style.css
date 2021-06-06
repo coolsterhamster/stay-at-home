@@ -210,12 +210,12 @@ p{
 
 
 /*選單*/
-#menu{
+.header{
 	width: 600px;
 	height: fit-content;
 }
 
-#menu ul{
+.header ul{
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -226,18 +226,18 @@ p{
 	font-weight: 600;
 }
 
-#menu ul li{
+.header ul li{
 	float: left;
 }
 
-#menu ul li a{
+.header ul li a{
 	display: block;
 	float: left;
 	height: 30px;
 	text-align: center;
 }
 
-#menu ul li ul {
+.header ul li ul {
 	position: absolute;
 	width: fit-content;
 	overflow: visible;
@@ -252,21 +252,21 @@ p{
 	font-weight: 200;
 }
 
-#menu ul li:hover ul {
+.header ul li:hover ul {
 	visibility: visible;}
 
-#menu ul li ul li {
+.header ul li ul li {
 	float: left;
 	text-align: center;}
 
-#menu ul li ul li a {
+.header ul li ul li a {
 	float: left;
 	width: 100%;
 	color: black;
 
 }
 
-#menu ul li ul li ul {
+.header ul li ul li ul {
 	margin-top: -30px;
 	margin-right: 0;
 	margin-bottom: 0;
@@ -275,113 +275,146 @@ p{
 }
 
 
+/*card*/
 
-
-
-
-/*.first-header{
-	list-style: none;
-	display: flex;
-	text-transform: uppercase;
-	font-weight: 600;
-	float: right;
-	margin: 0;
-	padding: 0;
-	overflow: auto;
-	font-size: 20px;
+.card-front__heading {
+  font-size: 1.5rem;
+  margin-top: .25rem;
 }
 
-.first-header a{
-	display: block;
-	text-align: left;
-	float: left;
+.inside-page__heading { 
+  padding-bottom: 1rem; 
+  width: 100%;
 }
 
-.first-header ul{
-	list-style: none;
-	position:absolute;
-	width: fit-content;
-	overflow: visible;
-	clear: left;
-	margin: 30px 0 0 0;
+.card-section {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
 }
 
-.layer a{
-	color: black;
-	font-weight: 300;
-	text-transform: lowercase;
+.card {
+  background-color: rgba(0,0,0, .05);
+  box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
+  height: 15rem;
+  position: relative;
+  transition: all 1s ease;
+  width: 15rem;
 }
 
-ul li ul li{
-	float:none;
-	text-align: center;
+.flip-card {
+  height: 15rem;
+  perspective: 100rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  visibility: hidden;
+  width: 15rem;
+  z-index: 100;
 }
 
-.layer li{
-	clear: left;
+.flip-card > * {
+  visibility: visible;
 }
 
-.layer a{
-	float:none;
-	width: 100%;
+.flip-card__container {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  width: 100%;
 }
 
-ul li ul {
-	/預先隱藏第二層 
-	visibility:hidden;
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
-ul li:hover ul {
-	 觸動第一層時，顯示第二層 
-	visibility:visible;
-}*/
+.card-front {
+  background-color: #fafbfa;
+  height: 15rem;
+  width: 15rem;
+}
+
+.card-front__tp {
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
+  display: flex;
+  flex-direction: column;
+  height: 12rem;
+  justify-content: center;
+  padding: .75rem;
+}
+
+.card-front__bt {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card-back {
+  background-color: #fafbfa;
+  transform: rotateY(180deg);
+}
+
+.inside-page {
+  background-color: #fafbfa;
+  box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0,0,0,0.25);
+  height: 100%;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  width: 15rem;
+  z-index: 1;
+}
+
+.inside-page__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center; 
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow:
+  -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
+  width: 30rem;
+}
+
+.card:hover .flip-card__container {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .inside-page {
+  box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
+}
+
+
+.card-front__tp--city {
+  background: linear-gradient(
+    to bottom,
+    #CEC6BB,
+    #A8A093
+  );
+}
+
 
 /*手機版的 */  
 
 @media screen and (max-width: 1023px) {
-#menu {
-    width: auto;
-  }
 
-.menu-button {
-    float: right;
-    font-size: 25px;
-    line-height: 40px;
-    color: white;
-    background: transparent;
-    padding: 0 15px;
-    border: 0;
-  }
-
-.menu-button-checkbox {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 55px;
-    height: 40px;
-    opacity: 0;
-  }
-
-.menu-button-checkbox:checked ~ .menu {
-    display: block;
-  }
-
-.header {
-    display: none;
-    margin-top: 0;
-    padding-left: 0;
-    position: fixed;
-    right: 0;
-    top: 40px;
-    width: 150px;
-    height: 100%;
-    background: red;
-  }
-
-#header li {
-    border: 0;
-    border-radius: 0;
-  }
 
 
 body {
@@ -414,7 +447,7 @@ section{
 h1{
 	line-height: 88%;
 	font-size: 3rem;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 h2{
@@ -465,7 +498,7 @@ h2{
 }
 
 .playlist-mobile{
-	margin-left: 25px;
+	margin-left: 20px;
 }
 
 .playlist-mobile iframe{
@@ -486,7 +519,11 @@ h2{
 
 
 @media screen and (min-width: 1024px) {
-  .playlist-mobile, .menu-button, .menu-button-checkbox {
+  .playlist-mobile, #header-container {
+    display: none;
+  }
+
+  .menu-button, .menu-button-checkbox {
     display: none;
   }
 
