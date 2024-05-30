@@ -479,7 +479,7 @@ section{
 	display: flex;
 	justify-content: space-between;
 	width: 90%;
-	overflow-x:hidden;
+	overflow-x: scroll;
 }
 
 h1{
